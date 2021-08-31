@@ -1,0 +1,111 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "procure uma imagem",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "olá",
+            "como vai você",
+            "diga oi mundo",
+            "diga oi",
+            "oi",
+            "diga olá mundo",
+            "diga olá"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ImageSearchIntent",
+          "slots": [
+            {
+              "name": "imagem",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "Da {imagem}",
+                "Do {imagem}",
+                "De {imagem}",
+                "Quero uma imagem de {imagem}"
+              ]
+            }
+          ],
+          "samples": [
+            "Me dá uma imagem da {imagem}",
+            "Me dá uma imagem do {imagem}",
+            "Me dá uma imagem de {imagem}",
+            "Procura uma imagem da {imagem}",
+            "Procura uma imagem do {imagem}",
+            "Procura uma imagem de {imagem}",
+            "Me vê uma imagem da {imagem}",
+            "Me vê uma imagem do {imagem}",
+            "Me vê uma imagem de {imagem}",
+            "Me manda uma imagem da {imagem}",
+            "Me manda uma imagem do {imagem}",
+            "Me manda uma imagem de {imagem}",
+            "Procurar imagem da {imagem}",
+            "Procurar imagem do {imagem}",
+            "Procurar imagem de {imagem}"
+          ]
+        },
+        {
+          "name": "LinkTelegramIntent",
+          "slots": [],
+          "samples": [
+            "Conectar Telegram"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ImageSearchIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "imagem",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.945204392896.624803071611"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.945204392896.624803071611",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sobre o que você quer uma imagem?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}
